@@ -4,8 +4,8 @@ namespace Hexafuchs\DynamicArtisanServiceProvider\Tests;
 
 use Hexafuchs\DynamicArtisanServiceProvider\DynamicArtisanServiceProvider;
 use Hexafuchs\DynamicArtisanServiceProvider\DynamicConsoleSupportServiceProvider;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Hexafuchs\DynamicArtisanServiceProvider\PackageServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

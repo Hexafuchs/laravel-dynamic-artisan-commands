@@ -2,10 +2,10 @@
 
 namespace Hexafuchs\DynamicArtisanServiceProvider;
 
+use Hexafuchs\DynamicArtisanServiceProvider\Commands\ShowConfigCommand as NewShowConfigCommand;
 use Illuminate\Foundation\Console\ConfigShowCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider as ServiceProvider;
-use Hexafuchs\DynamicArtisanServiceProvider\Commands\ShowConfigCommand as NewShowConfigCommand;
 
 class PackageServiceProvider extends ServiceProvider
 {
@@ -26,5 +26,4 @@ class PackageServiceProvider extends ServiceProvider
             DynamicArtisanServiceProvider::registerCommand('ConfigShow', ConfigShowCommand::class, NewShowConfigCommand::class, true);
         }
     }
-
 }
