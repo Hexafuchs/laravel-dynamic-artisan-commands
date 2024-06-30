@@ -82,8 +82,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
                 "Hexafuchs\\DynamicArtisanServiceProvider\\PackageServiceProvider",
+                "Hexafuchs\\DynamicArtisanServiceProvider\\DynamicConsoleSupportServiceProvider",
                 "Hexafuchs\\DynamicArtisanServiceProvider\\DynamicArtisanServiceProvider"
             ],
             "aliases": {
