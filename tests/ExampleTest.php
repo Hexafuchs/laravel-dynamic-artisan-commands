@@ -1,5 +1,5 @@
 <?php
 
-it('can test', function () {
-    expect(true)->toBeTrue();
+it('can overwrite command', function () {
+    $this->artisan('config:show app.test')->assertExitCode(2);
 });

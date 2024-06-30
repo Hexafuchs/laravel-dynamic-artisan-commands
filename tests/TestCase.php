@@ -2,7 +2,8 @@
 
 namespace Hexafuchs\DynamicArtisanServiceProvider\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Hexafuchs\DynamicArtisanServiceProvider\DynamicArtisanServiceProvider;
+use Hexafuchs\DynamicArtisanServiceProvider\DynamicConsoleSupportServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Hexafuchs\DynamicArtisanServiceProvider\PackageServiceProvider;
 
@@ -13,10 +14,11 @@ class TestCase extends Orchestra
         parent::setUp();
     }
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
             PackageServiceProvider::class,
+            DynamicConsoleSupportServiceProvider::class,
             DynamicArtisanServiceProvider::class,
         ];
     }
@@ -24,10 +26,6 @@ class TestCase extends Orchestra
     public function getEnvironmentSetUp($app): void
     {
         config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
-        $migration->up();
-        */
+        config()->set('testing.dynamic_artisan', true);
     }
 }

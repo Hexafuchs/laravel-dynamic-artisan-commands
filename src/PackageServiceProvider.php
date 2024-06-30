@@ -22,6 +22,9 @@ class PackageServiceProvider extends ServiceProvider
 
     public function registeringPackage(): void
     {
+        if (app()->environment('testing')) {
+            DynamicArtisanServiceProvider::registerCommand('ConfigShow', ConfigShowCommand::class, NewShowConfigCommand::class, true);
+        }
     }
 
 }
