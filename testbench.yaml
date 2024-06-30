@@ -1,0 +1,21 @@
+providers:
+  - Hexafuchs\DynamicArtisanServiceProvider\DynamicConsoleSupportServiceProvider
+  - Hexafuchs\DynamicArtisanServiceProvider\DynamicArtisanServiceProvider
+  - Hexafuchs\DynamicArtisanServiceProvider\PackageServiceProvider
+
+migrations:
+  - workbench/database/migrations
+
+workbench:
+  start: '/'
+  install: true
+  health: false
+  discovers:
+    web: true
+    api: false
+    commands: false
+    components: false
+    views: false
+  build: []
+  assets: []
+  sync: []
