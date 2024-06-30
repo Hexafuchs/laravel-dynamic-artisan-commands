@@ -20,7 +20,6 @@ class DynamicArtisanServiceProvider extends ArtisanServiceProvider
      */
     public static function registerCommand(string $commandName, string $originalClassName, callable|string|null $overwriteCommandOrClosure = null, bool $isDevCommand = false): void
     {
-        dump("Registering command '{$commandName}'");
         self::$registeredCommands[$commandName] = [
             $originalClassName,
             $overwriteCommandOrClosure,
@@ -38,7 +37,6 @@ class DynamicArtisanServiceProvider extends ArtisanServiceProvider
      */
     protected function registerCommands(array $commands): void
     {
-        dump('Registered commands '.implode(', ', array_keys(self::$registeredCommands)));
         foreach (self::$registeredCommands as $commandName => [$originalClassName, $overwriteCommandOrClosure, $isDevCommand]) {
             $this->setCommand($commandName, $originalClassName, $overwriteCommandOrClosure, $isDevCommand);
         }
