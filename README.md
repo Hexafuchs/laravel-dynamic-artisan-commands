@@ -1,3 +1,5 @@
+# Moved to https://codeberg.org/Hexafuchs/laravel-dynamic-artisan-commands
+
 # Library for dynamic replacement of artisan commands
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hexafuchs/laravel-dynamic-artisan-commands.svg?style=flat-square)](https://packagist.org/packages/hexafuchs/laravel-dynamic-artisan-commands)
